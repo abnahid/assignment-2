@@ -153,9 +153,11 @@
         <div class="bmi-content">
             <div class="bmi-chert">
                 <h3 class="bmi-chert-title">BMI Calculator Chart</h3>
-                <table border="1">
-                    <th>BMI</th>
-                    <th>Weight Status</th>
+                <table class="table">
+                    <tr>
+                        <th>BMI</th>
+                        <th>Weight Status</th>
+                    </tr>
                     <tr>
                         <td>Below 18.5</td>
                         <td>Underweight
@@ -185,38 +187,33 @@
 
                 <div class="bmi-input">
 
-                    <div class="bmi-1-row">                        
-                        <input type="text" name="height"  placeholder="Height/cm">
-                        <input type="text" name="weight"  placeholder="Weight/kg">
-                    </div>
-                    
-                    <div class="bmi-1-row">
-                    <input type="text" name="age"  placeholder="Age">
-    
-                    <select name="Sex" id="Sex">
-                        <option value="Sex">Sex</option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                    </select>
-                     
-                    </div>
-                    <div class="bmi-1-row">
-                        <select name="Select-an-activity-factor" id="Select-an-activity-factor">
-                            <option value="">Select an activity factor</option>
-                            <option value="business">Business</option>
-                            <option value="leisure">Work</option>
-                            <option value="other">Student</option>
-                        </select>
 
-                    </div>
+                <input type="text" placeholder="Height/cm">
+                <input type="text" placeholder="Weight/kg"> <br>
+                <input type="text" placeholder="Age">
+                <select name="Sex" id="Sex">
+                    <option value="Sex">Sex</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select><br>
+
+                <select name="Select-an-activity-factor" id="Select-an-activity-factor">
+                    <option value="">Select an activity factor</option>
+                    <option value="business">Business</option>
+                    <option value="leisure">Work</option>
+                    <option value="other">Student</option>
+                </select><br>
+
                     <button class="btn">Calculate</button>
                 </div>
             </div>
         </div>
 
     </div>
+
+
     <!-- Meet Our Team Section -->
-    <!-- <section>
+    <section>
         <div class="team-container">
             <div class="team-content">
                 <h3 class="section-title">Meet Our Team</h3>
@@ -269,7 +266,7 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
 
     <!-- Footer Section -->

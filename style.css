@@ -296,7 +296,7 @@ header {
 }
 
 /* BMI Calculator Chart */
-.bmi-container{
+.bmi-container {
     background-color: rgba(255, 255, 255, 0.1);
     height: 500px;
     margin: 100px 0;
@@ -304,61 +304,86 @@ header {
     justify-content: center;
     align-items: center;
 }
-.bmi-content{
-    max-width: 1060px;
-    margin: 0 auto;
+
+.bmi-content {
+    max-width: 100%;
     display: flex;
-    border: 1px solid red;
+    align-items: center;
+    justify-content: space-evenly;
 }
-.bmi-chert{
-    max-width: 1060px;
-    border: 1px solid red;
+
+.bmi-chart {
+    max-width: 350px;
+    margin-top: -17px;
 }
-.bmi-chert table{
+
+.bmi-chart table {
+    color: var(--text-color1);
+    width: 100%;
+    border-collapse: collapse;
+}
+.table{
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-collapse: collapse;
+}
+.table th, .table td {
     border: 1px solid var(--text-color2);
+    padding: 8px;
+    text-align: center;
 }
-.bmi-title-info{
+
+.table th{
+    color: var(--text-color1);
+    font-size: 1rem;
+    font-weight: 500;
+}
+.table tr{
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--text-color2);
+}
+
+.bmi-title-info {
     margin-bottom: 30px;
-    border: 1px solid red;
 }
-.bmi-chert-title{
+
+.bmi-chart-title {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 20px;
 }
-.bmi-calculator{
+
+.bmi-calculator {
     width: 676px;
     margin-left: 100px;
-    border: 1px solid red;
 }
 
-.bmi-1-row{
-    display: flex;
-    justify-content: center;
-    gap: 5px;
+.bmi-input {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
 }
-.bmi-1-row select{
-    width: 300px;
-    height: 52px;
-}
-.bmi-1-row > div{
-    flex: 1;
-}
-.bmi-input input,
-select {
-    width: 300px;
-    height: 52px;
-    font-size: 1.2rem;
-    font-weight: 500;
-    padding: 0 20px;
-    margin: 0 1rem;
+
+.bmi-input input[type="text"], 
+.bmi-input select {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    font-weight: 400;
+    padding: 12px 20px;
+    margin: 5px 0;
     border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
     border: none;
-    cursor: pointer;
-    text-transform: capitalize;
-    background: var(--text-color2);
 }
 
+#Select-an-activity-factor{
+    margin-top: 10px;
+    height: 40px;
+    width: 350px;
+}
+.bmi-input > .btn {
+    margin-top: 34px;
+}
 /* Meet My Team Section */
 .team-container {
     display: flex;
@@ -379,26 +404,39 @@ select {
     margin-top: 58px;
     border-radius: 18px;
     background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+
+    /* max-width: 1060px; */
+    margin-top: 58px;
+    /* border-radius: 18px; */
 }
 
 .team-member {
+    background-color: #2e2e2e;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+    width: 350px;
     position: relative;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .team-member img {
+    width: 400px;
+    height: 300px;
     border-radius: 18px;
-    max-width: 326px;
-    height: 272px;
     background-color: rgba(0, 0, 0, 0.2);
     object-fit: cover;
+    object-position: center;
 }
 
 .team-member-info {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-100%, 100%);
-    text-align: left;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
 }
 
 .team-member-name {

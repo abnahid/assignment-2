@@ -189,6 +189,12 @@ header {
     bottom: 43px;
     left: -115px;
 }
+.circle{
+    width: 30px;
+    height: 30px;
+    background-color: var(--main-second);
+    border-radius: 50%;
+}
 
 .text-box {
     background: rgba(255, 255, 255, 0.103);
@@ -309,7 +315,8 @@ header {
     max-width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    /* flex-direction: row; */
 }
 
 .bmi-chart {
@@ -318,18 +325,17 @@ header {
 }
 
 .bmi-chart table {
-    color: var(--text-color1);
-    width: 100%;
-    border-collapse: collapse;
-}
-.table{
     border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 310px;
+    height: 216px;
     border-collapse: collapse;
+    margin-top: 52px;
 }
+
 .table th, .table td {
     border: 1px solid var(--text-color2);
-    padding: 8px;
-    text-align: center;
+    padding: 0 18px;
+    text-align: left;
 }
 
 .table th{
@@ -349,39 +355,45 @@ header {
 
 .bmi-chart-title {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 900;
     margin-bottom: 20px;
 }
 
 .bmi-calculator {
-    width: 676px;
+    max-width: 577px;
+    /* height: 386px; */
     margin-left: 100px;
 }
 
 .bmi-input {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
 }
-
+.bmi-input input::placeholder{
+    color: rgba(255, 255, 255, 0.6);
+}
 .bmi-input input[type="text"], 
-.bmi-input select {
+.bmi-input select{
     color: rgba(255, 255, 255, 0.6);
     font-size: 16px;
     font-weight: 400;
     padding: 12px 20px;
-    margin: 5px 0;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.1);
     border: none;
+    width: 100%;
+    box-sizing: border-box;
 }
-
-#Select-an-activity-factor{
-    margin-top: 10px;
+.bmi-input option {
+    color: var(--bg-color);
+}
+#Select-an-activity-factor {
+    grid-column: span 2;
     height: 40px;
-    width: 350px;
+    color: var(--text-color2);
 }
-.bmi-input > .btn {
+.bmi-calculator > .btn {
     margin-top: 34px;
 }
 /* Meet My Team Section */
@@ -405,20 +417,16 @@ header {
     border-radius: 18px;
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
-
-    /* max-width: 1060px; */
-    margin-top: 58px;
-    /* border-radius: 18px; */
 }
 
 .team-member {
-    background-color: #2e2e2e;
-    border-radius: 10px;
+    width: 350px;
     display: flex;
     overflow: hidden;
-    width: 350px;
     position: relative;
+    border-radius: 18px;
     align-items: center;
+    background-color: var(--text-color2);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -426,9 +434,9 @@ header {
     width: 400px;
     height: 300px;
     border-radius: 18px;
-    background-color: rgba(0, 0, 0, 0.2);
     object-fit: cover;
     object-position: center;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .team-member-info {
@@ -560,6 +568,16 @@ footer hr {
     }
     .event-image img {
         width: auto;
+    }
+    .bmi-container{
+        height: auto;
+    }
+    .bmi-content{
+        margin: 0 auto;
+        flex-direction: column;
+    }
+    .teams {
+        grid-template-columns: 1fr;
     }
     footer{
         height: auto;

@@ -184,7 +184,7 @@ header {
 
 .top-right {
     top: 120px;
-    right: -110px;
+    right: -60px;
 }
 
 .bottom-left {
@@ -226,7 +226,7 @@ header {
 }
 
 .text-box p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
     color: var(--text-color2);
 }
@@ -716,6 +716,9 @@ footer hr {
 
     .bmi-content {
         max-width: 80%;
+    }
+    .bmi-chart-title {
+        font-size: 1.8rem;
     }
     .bmi-chart table {
         width: auto;

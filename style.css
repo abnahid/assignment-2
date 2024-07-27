@@ -168,6 +168,7 @@ header {
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: 28px;
+    color: var(--text-color2);
 }
 
 .banner-image {
@@ -189,14 +190,8 @@ header {
     bottom: 43px;
     left: -115px;
 }
-.circle{
-    width: 30px;
-    height: 30px;
-    background-color: var(--main-second);
-    border-radius: 50%;
-}
 
-.text-box {
+.text-box{
     background: rgba(255, 255, 255, 0.103);
     backdrop-filter: blur(10px);
     box-sizing: border-box;
@@ -204,18 +199,32 @@ header {
     border-radius: 12px;
     padding: 10px 20px;
 }
-
-.banner-image h3 {
-    font-size: 4rem;
+.text-box-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text-box i {
+    background-color: var(--main-second);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    color: var(--main-second);
+}
+.text-box h3{
+    font-size: 2.5rem;
     font-weight: 900;
+    margin-bottom: 8px;
 }
-
-.banner-image p {
-    font-size: 1rem;
+.text-box p {
+    font-size: 1.2rem;
     font-weight: 400;
-    text-align: left;
+    color: var(--text-color2);
 }
-
 
 /* Change Habits Section */
 .habits-container {
@@ -231,18 +240,16 @@ header {
 }
 
 .cards {
-    display: flex;
+    display: grid;
     justify-content: center;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    /* flex-direction: row; */
-    flex-wrap: wrap;
     margin-top: 58px;
 }
 
 .card {
-    padding: 20px;
-    width: 200px;
+    padding: 2%;
+    width: 240px;
     text-align: center;
 }
 
@@ -250,6 +257,7 @@ header {
     width: 100%;
     height: auto;
     border-radius: 50%;
+    border: 5px solid #222222;
 }
 
 .card-title {
@@ -361,7 +369,6 @@ header {
 
 .bmi-calculator {
     max-width: 577px;
-    /* height: 386px; */
     margin-left: 100px;
 }
 
@@ -479,7 +486,7 @@ footer {
 .footer-logo {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 40%;
 }
 
 .footer-logo-title {
@@ -489,7 +496,7 @@ footer {
 }
 
 .footer-logo-description {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 400;
     color: var(--text-color2);
     margin-top: 20px;
@@ -511,16 +518,21 @@ footer ul li {
 footer hr {
     margin-top: 78px;
     width: 95%;
-    color: var(--text-color2);
+    border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .copyright {
     margin: 35px auto;
+    color: var(--text-color2);
 }
 
 @media screen and (max-width: 576px) {
     .nav-icon {
         display: block;
+    }
+    .nav-icon i{
+        font-size: 35px;
+        margin-right: 20px;
     }
 
     nav ul {
@@ -562,7 +574,9 @@ footer hr {
         bottom: 200px;
         left: -10px;
     }
-
+    .cards{
+        grid-template-columns: 1fr;
+    }
     .event-content{
         max-width: 100%;
     }

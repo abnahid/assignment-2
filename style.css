@@ -305,8 +305,8 @@ header {
     height: 312px;
     border-radius: 18px;
     margin: 30px;
-    object-fit: cover;
-    object-position: top right;
+    object-fit: none;
+    object-position: 66% 30%;
 }
 
 /* BMI HEADER */
